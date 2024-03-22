@@ -1,5 +1,5 @@
 {
-  "name": "zim32/xhprof-profiler-bundle",
+  "name": "yaliilyaya/xhprof-profiler-bundle",
   "description": "This bundle add additional XHProf menu item in symfony debug toolbar",
   "type": "symfony-bundle",
   "keywords": ["symfony", "bundle", "xhprof", "debug"],
@@ -21,8 +21,9 @@
     }
   },
   "require": {
-    "php": "^7.0",
-    "symfony/framework-bundle": "^4.0|^5.0"
+    "ext-xhprof": "*",
+    "php": "^7.0|^7.0",
+    "symfony/framework-bundle": "^4.0|^5.0|^5.0"
   },
   "suggest" : {
     "ext-tideways_xhprof" : "This package requires tideways_xhprof extension. Activate it for FPM only"
