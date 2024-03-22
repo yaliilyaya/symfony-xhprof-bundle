@@ -24,7 +24,7 @@ class XhProfDataCollector extends DataCollector
             return;
         }
 
-        $data = tideways_xhprof_disable();
+        $data = xhprof_disable();
 
         uasort($data, function(array $a, array $b) {
             return $b['wt'] - $a['wt'];
@@ -86,7 +86,7 @@ class XhProfDataCollector extends DataCollector
         return [
             'ZIM_XHPROF_ENABLE'    => array_key_exists('ZIM_XHPROF_ENABLE', $_ENV) ? $_ENV['ZIM_XHPROF_ENABLE']  : 'NOT SET',
             'ZIM_XHPROF_CONDITION' => array_key_exists('ZIM_XHPROF_CONDITION', $_ENV) ? $_ENV['ZIM_XHPROF_CONDITION']  : 'NOT SET',
-            'extension_loaded'     => extension_loaded('tideways_xhprof') ? 'YES' : 'NO',
+            'extension_loaded'     => extension_loaded('xhprof') ? 'YES' : 'NO',
         ];
     }
 

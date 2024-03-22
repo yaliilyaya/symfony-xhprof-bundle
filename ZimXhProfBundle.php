@@ -15,7 +15,7 @@ class ZimXhProfBundle extends Bundle
         if (
             !isset($_ENV['ZIM_XHPROF_ENABLE']) ||
             !$_ENV['ZIM_XHPROF_ENABLE'] ||
-            false === extension_loaded('tideways_xhprof') ||
+            false === extension_loaded('xhprof') ||
             false === $this->checkCondition()
         ) {
             return;
@@ -23,7 +23,7 @@ class ZimXhProfBundle extends Bundle
 
         self::$needToCollect = true;
 
-        tideways_xhprof_enable(TIDEWAYS_XHPROF_FLAGS_MEMORY);
+        xhprof_enable(XHPROF_FLAGS_MEMORY);
     }
 
     public function checkCondition()
